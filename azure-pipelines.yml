@@ -17,3 +17,5 @@ parameters:
    values:
    - devops
    - dev 
+
+Stages:
