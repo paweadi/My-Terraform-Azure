@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool: Default
-  agent: rsa-devop-vm
+agent: rsa-devop-vm
 
 
 
