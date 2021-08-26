@@ -6,10 +6,8 @@
 trigger:
 - main
 
-#pool: Default
-agent: rsa-devop-vm
-
-
+  pool: 
+    name: Default
 
 steps:
 - script: echo Hello, world!
