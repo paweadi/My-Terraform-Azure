@@ -19,8 +19,8 @@ parameters:
    - dev 
 
 stages:
-- stage: init
-  template: ci/init.yml
-  parameters:
-    envs: 
-      - ${{parameters.environment}}
+ - stage: init
+   template: ci/init.yml
+   parameters:
+     envs: 
+       - ${{parameters.environment}}
