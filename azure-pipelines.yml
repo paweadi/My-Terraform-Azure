@@ -19,6 +19,8 @@ parameters:
    - dev 
 
 stages:
-- stage: A
-  jobs:
-  - job: A1
+- stage: init
+  template: ci/init.yml
+  parameters:
+    envs: 
+      - ${{parameters.environment}}
