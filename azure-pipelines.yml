@@ -20,3 +20,5 @@ parameters:
 
 stages:
 - stage: A
+  jobs:
+  - job: A1
