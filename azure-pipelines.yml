@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: rsa-terraform-vm
 
 steps:
 - script: echo Hello, world!
