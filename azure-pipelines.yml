@@ -19,3 +19,4 @@ parameters:
    - dev 
 
 stages:
+- stage: A
