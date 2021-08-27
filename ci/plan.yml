@@ -4,5 +4,5 @@ stages:
   - job: TerreformPlan
     steps:
     - bash: terraform init
-      workingDirectory: '../environments/devops/'
+      workingDirectory: '../environments/devops'
       displayName: 'Terraform Init'
