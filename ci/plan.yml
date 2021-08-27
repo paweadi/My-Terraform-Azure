@@ -1,9 +1,9 @@
 stages:
  - stage: plan
-   jobs:
-   - job: Terreform Plan
-     steps:
-     - script: |
-   	terraform init
-  	workingDirectory: '../environments/devops/'
- 	displayName: 'Terraform Init'
+    jobs:
+    - job: Terreform Plan
+       steps:
+       - script: |
+          terraform init
+          workingDirectory: '../environments/devops/'
+          displayName: 'Terraform Init'
