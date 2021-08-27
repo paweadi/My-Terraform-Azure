@@ -6,3 +6,7 @@ stages:
     - bash: terraform init
       workingDirectory: '$(Pipeline.Workspace)/s/environments/devops'
       displayName: 'Terraform Init'
+    - bash: terraform plan
+      workingDirectory: '$(Pipeline.Workspace)/s/environments/devops'
+      displayName: 'Terraform plan'
+
