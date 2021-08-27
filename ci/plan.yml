@@ -1,8 +1,8 @@
 stages:
- - stage: plan 
+ - stage: plan
+ - template: ../environments/devops/main.tf 
    jobs:
    - job: Terreform Plan
-   - template: ../environments/devops/plan.yml  
      steps:
        - name: Terraform Init
          run: terraform init
