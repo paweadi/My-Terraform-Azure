@@ -1,11 +1,9 @@
 stages:
  - stage: plan
- - template: ../environments/devops/main.tf 
    jobs:
    - job: Terreform Plan
      steps:
-       - name: Terraform Init
-         run: terraform init
-      
-       - name: Terraform plan
-         run: terraform plan
+     - script: |
+   	terraform init
+  	workingDirectory: '../environments/devops/'
+ 	displayName: 'Terraform Init'
