@@ -1,7 +1,7 @@
 stages:
 - stage: plan
   jobs:
-  - job: Terreform Plan
+  - job: TerreformPlan
     steps:
     - script: |
         terraform init
