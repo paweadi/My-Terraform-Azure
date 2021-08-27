@@ -1,12 +1,5 @@
-
 stages:
   jobs:
-#  terraform:
-#    env:
-#      ARM_CLIENT_ID:
-#      ARM_CLIENT_SECRET:
-#      ARM_SUBSCRIPTION_ID: d0ce94f2-7546-489d-8869-b88aaa16fa54
-#      ARM_TENANT_ID: 76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61
    - job: Plan
    - template: ../environments/devops/*  
      steps:
