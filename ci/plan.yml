@@ -3,7 +3,6 @@ stages:
   jobs:
   - job: TerreformPlan
     steps:
-    - script: |
-        terraform init
-        workingDirectory: '../environments/devops/'
-        displayName: 'Terraform Init'
+    - bash: terraform init
+      workingDirectory: '../environments/devops/'
+      displayName: 'Terraform Init'
