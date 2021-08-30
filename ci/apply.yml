@@ -2,6 +2,7 @@ stages:
  - stage: Apply_${{ environment }}
    jobs:
     - deployment: Apply_${{ environment }}
+      displayName: 'Display'
       pool: Default
       environment: apply_devops
       strategy:
