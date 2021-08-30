@@ -23,3 +23,9 @@ stages:
    parameters:
      envs: 
        - ${{parameters.environment}}
+
+ - template: ci/apply.yml
+   parameters:
+     envs:
+       - ${{parameters.environment}}
+

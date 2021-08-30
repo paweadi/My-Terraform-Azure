@@ -1,0 +1,5 @@
+stages:
+ - stage: Apply_${{ environment }}
+   jobs:
+    - deployment: Apply_${{ environment }}
+      environment: apply_${{ environment }}
