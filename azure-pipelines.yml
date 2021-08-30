@@ -19,7 +19,6 @@ parameters:
    - dev 
 
 stages:
- - stage: DevopsPlan
  - template: ci/plan.yml
    parameters:
      envs: 
