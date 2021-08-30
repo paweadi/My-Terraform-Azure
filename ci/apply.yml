@@ -3,3 +3,9 @@ stages:
    jobs:
     - deployment: Apply_${{ environment }}
       environment: apply_${{ environment }}
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - script: echo Hello
+
