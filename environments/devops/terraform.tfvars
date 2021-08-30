@@ -1,0 +1,5 @@
+rg_name = "rsacognetiveservices-devops"
+rg_location = "West Europe"
+ca_name = "rsacognetiveservices-account-devops"
+ca_kind = "Face"
+ca_sku = "S0"
