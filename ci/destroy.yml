@@ -1,0 +1,13 @@
+stages:
+- stage: Destroy_Devops
+  jobs:
+  - deployment: Destroy_Devops
+    environment:
+     name: destroy_devops
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - bash: terraform destroy -var-file=./terraform.tfvars -auto-approve
+            workingDirectory: '$(Pipeline.Workspace)/s/environments/devops'
+            displayName: 'Terraform DestroyDevops'
