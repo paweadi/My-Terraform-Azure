@@ -29,3 +29,8 @@ stages:
      envs:
        - ${{parameters.environment}}
 
+ - template: ci/destroy.yml
+   parameters:
+     envs:
+       - ${{parameters.environment}}
+
