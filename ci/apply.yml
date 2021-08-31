@@ -1,13 +1,14 @@
 stages:
-- stage: Apply_devops
+- stage: Apply_Devops
   jobs:
-  - deployment: Apply_devops
-#     pool: Default
+  - deployment: Apply_Devops
     environment: 
      name: apply_devops
     strategy:
       runOnce:
         deploy:
           steps:
-          - script: echo Hello
+          - bash: terraform apply -var-file=./terraform.tfvars
+            workingDirectory: '$(Pipeline.Workspace)/s/environments/devops'
+            displayName: 'Terraform ApplyDevops'
 
