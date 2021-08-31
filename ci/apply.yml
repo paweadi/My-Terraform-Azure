@@ -1,12 +1,13 @@
 stages:
- - stage: Apply_${{ environment }}
-   jobs:
-    - deployment: Apply_${{ environment }}
-      pool: Default
-      environment: apply_devops
-      strategy:
-        runOnce:
-          deploy:
-            steps:
-            - script: echo Hello
+- stage: Apply_${{ environment }}
+  jobs:
+  - deployment: Apply_${{ environment }}
+#     pool: Default
+    environment: 
+     name: apply_${{ environment }}
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo Hello
 
