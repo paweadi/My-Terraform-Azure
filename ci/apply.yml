@@ -8,7 +8,7 @@ stages:
       runOnce:
         deploy:
           steps:
-          - bash: terraform apply -var-file=./terraform.tfvars
+          - bash: terraform apply -var-file=./terraform.tfvars -auto-approve
             workingDirectory: '$(Pipeline.Workspace)/s/environments/devops'
             displayName: 'Terraform ApplyDevops'
 
