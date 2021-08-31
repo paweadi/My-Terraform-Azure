@@ -1,10 +1,10 @@
 stages:
-- stage: Apply_${{ environment }}
+- stage: Apply_${{parameter.environment}}
   jobs:
-  - deployment: Apply_${{ environment }}
+  - deployment: Apply_${{parameter.environment}}
 #     pool: Default
     environment: 
-     name: apply_${{ environment }}
+     name: apply_${{parameter.environment}}
     strategy:
       runOnce:
         deploy:
