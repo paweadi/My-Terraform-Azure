@@ -11,3 +11,11 @@ terraform {
     }
   }
 }
+
+terraform {   
+ backend "azurerm" {     
+ storage_account_name  = "tfstatestoragersa"     
+ container_name        = "tfstate"     
+ key                   = "terraform.tfstate"   
+ } 
+}
