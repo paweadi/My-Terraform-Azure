@@ -16,6 +16,7 @@ terraform {
  backend "azurerm" {     
  storage_account_name  = "tfstatestoragersa"     
  container_name        = "tfstate"     
- key                   = "terraform.tfstate"   
+ key                   = "terraform.tfstate"
+ access_key            = "pzG8uYSxKSgaK8LwNMFNCnAsXHS4TMCnRi9mYEs7YCvJyWcZS/R/fJ5jyot4x9+D7jkvFHVLB9DHqLxDHY7xgw==" 
  } 
 }
