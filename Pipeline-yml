@@ -1,0 +1,35 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool: 
+  name: Default
+
+parameters:
+ - name: environment
+   displayName: Environment Name
+   type: string
+   default: devops
+   values:
+   - devops
+   - dev 
+
+stages:
+ - template: ci/plan.yml
+   parameters:
+     envs: 
+       - ${{parameters.environment}}
+
+ - template: ci/apply.yml
+   parameters:
+     envs:
+       - ${{parameters.environment}}
+
+ - template: ci/destroy.yml
+   parameters:
+     envs:
+       - ${{parameters.environment}}
